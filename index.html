@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e6;
+            color: #333;
+            text-align: center;
+        }
+        .heart {
+            position: absolute;
+            top: -50px;
+            font-size: 24px;
+            animation: float 10s infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .hidden {
+            display: none;
+        }
+        #surprise {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff4d4d;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Valentine's Day!</h1>
+    <h2>Celebrating our love!</h2>
+    <div id="counter"></div>
+    <h3>Reasons I Love You:</h3>
+    <ul>
+        <li>Your smile lights up my day.</li>
+        <li>You always know how to make me laugh.</li>
+        <li>Your kindness is unmatched.</li>
+        <li>Your passion for life is inspiring.</li>
+        <li>Every moment with you is a treasure.</li>
+    </ul>
+    <button id="surprise" class="hidden">🎉 Surprise!</button>
+    <script>
+        const startDate = new Date('2024-07-11');
+        const currentDate = new Date();
+        const daysTogether = Math.floor((currentDate - startDate) / (1000 * 60 * 60 * 24));
+        document.getElementById('counter').innerText = `We have been together for ${daysTogether} days!`;
+
+        const surpriseButton = document.getElementById('surprise');
+        setTimeout(() => {
+            surpriseButton.classList.remove('hidden');
+        }, 5000);
+
+        for (let i = 0; i < 50; i++) {
+            const heart = document.createElement('div');
+            heart.innerHTML = '❤️';
+            heart.className = 'heart';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 15 + 5 + 's';
+            document.body.appendChild(heart);
+        }
+    </script>
+</body>
+</html>
