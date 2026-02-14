@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Para Mi Media Naranja 🍊💕">
+<meta property="og:description" content="Un regalo especial para la persona que amo ❤️">
+<meta property="og:image" content="https://emoji.arra.de/emojis/%F0%9F%8D%8A.png">
+<title>Para Mi Media Naranja 🍊</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #fff0f5, #ffe6f0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 400px;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  color: #c9184a;
+  margin-top: 30px;
+  animation: fadeIn 1.5s ease;
+}
+
+.subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+  animation: aparecer 1s ease;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  background-color: #ff4d6d;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 15px;
+}
+
+button:hover {
+  background-color: #d63384;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.sorpresa {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.sorpresa.mostrar {
+  display: block;
+  opacity: 1;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.corazon {
+  position: fixed;
+  color: #ff4d6d;
+  animation: flotar 6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes flotar {
+  from { transform: translateY(100vh); opacity: 1; }
+  to { transform: translateY(-10vh); opacity: 0; }
+}
+
+.footer {
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+  margin-top: 30px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1 class="title">Para Mi Media Naranja 🍊💕</h1>
+<p class="subtitle">Esta app fue creada con todo mi amor solo para ti.</p>
+
+<div class="card">
+<h2>⏳ Nuestro Tiempo Juntos</h2>
+<p id="contador" style="font-size: 18px; font-weight: bold; color: #ff4d6d;"></p>
+</div>
+
+<div class="card">
+<h2>💖 Razones por las que te amo</h2>
+<ul>
+<li>Amo tu sonrisa hermosa</li>
+<li>Amo tu ternura infinita</li>
+<li>Amo lo divertida y bromista que eres</li>
+<li>Amo cuando te pones enojona poquito</li>
+<li>Amo lo melindrosa que eres conmigo</li>
+<li>Amo lo mandilona que eres 😂</li>
+<li>Amo lo migajera conmigo</li>
+<li>Amo tu dulzura</li>
+<li>Amo tu corazón</li>
+<li>Amo que seas mi persona favorita</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>🌸 Así eres tú</h2>
+<p>
+Tierna, dulce, guapa, sonriente, divertida, bromista,
+un poquito enojona, melindrosa… pero siempre la más hermosa.
+</p>
+</div>
+
+<button onclick="mostrarSorpresa()">No presiones aquí 💌</button>
+
+<div id="sorpresa" class="card sorpresa">
+<h2>Mi Sorpresa Para Ti 
